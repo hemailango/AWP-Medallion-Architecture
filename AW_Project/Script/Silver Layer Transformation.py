@@ -17,7 +17,7 @@ from pyspark.sql.types import *
 spark.conf.set("fs.azure.account.auth.type.awprojstorage.dfs.core.windows.net", "OAuth")
 spark.conf.set("fs.azure.account.oauth.provider.type.awprojstorage.dfs.core.windows.net", "org.apache.hadoop.fs.azurebfs.oauth2.ClientCredsTokenProvider")
 spark.conf.set("fs.azure.account.oauth2.client.id.awprojstorage.dfs.core.windows.net", "<application-id>")
-spark.conf.set("fs.azure.account.oauth2.client.secret.awprojstorage.dfs.core.windows.net", "service_credential")
+spark.conf.set("fs.azure.account.oauth2.client.secret.awprojstorage.dfs.core.windows.net", "<service_credential>")
 spark.conf.set("fs.azure.account.oauth2.client.endpoint.awprojstorage.dfs.core.windows.net", "https://login.microsoftonline.com/<directory-id>/oauth2/token")
 
 # COMMAND ----------
