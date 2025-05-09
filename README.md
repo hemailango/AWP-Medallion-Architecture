@@ -112,7 +112,7 @@ Power BI Dashboard (Simple reporting layer) </pre>
 
 - The implementation remains simple and beginner-friendly, making it ideal for showcasing hands-on experience with Azure’s core data tools.
 
-─────────────────────────────────────────────────────────────────────────────────────────
+───────────────────────────────────────────────────────────────────────────────────
 ## 🤝 Acknowledgements
 
 Special thanks to the data engineering community for sharing valuable insights, which encouraged me to explore and apply real-world concepts hands-on.
