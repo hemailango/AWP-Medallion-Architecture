@@ -1,9 +1,8 @@
 # 🧩 Azure Data Engineering Project: End-to-End ETL Pipeline
+
 This project demonstrates a complete ETL pipeline using Microsoft Azure services, based on the Medallion Architecture (Bronze → Silver → Gold). The goal was to implement data engineering best practices by implementing real-world data engineering concepts using the Azure ecosystem. The project ingests, transforms, and serves data to support reporting, ultimately showcasing the practical responsibilities of a Data Engineer in a cloud-based environment.
 
-───────────────────────────────────────────────────────────────────────────────────────
-
-
+─────────────────────────────────────────────────────────────────────────────────────────
 ## 🎯 Project Objective
 
 To implement a scalable Azure-based data pipeline that:
@@ -13,8 +12,7 @@ To implement a scalable Azure-based data pipeline that:
 - Stores data in a structured format across Medallion Architecture layers
 - Enables analytical access through Synapse Serverless SQL and visualization via Power BI
 
-───────────────────────────────────────────────────────────────────────────────────────
-
+─────────────────────────────────────────────────────────────────────────────────────────
 ## 🧬 Architecture Overview
 
 <pre> [GitHub CSV Files]
@@ -34,8 +32,7 @@ Azure Synapse Analytics (Serverless SQL Pool)
       v
 Power BI Dashboard (Simple reporting layer) </pre>
 
-───────────────────────────────────────────────────────────────────────────────────────
-
+─────────────────────────────────────────────────────────────────────────────────────────
 ## 🛠️ Tools & Technologies
 
 | 🧰 Tool/Service              | 🔍 Purpose                                                  |
@@ -47,7 +44,7 @@ Power BI Dashboard (Simple reporting layer) </pre>
 | Azure Synapse Serverless SQL| Expose external tables and views for querying               |
 | Power BI                    | Data visualization and reporting from Synapse               |
 
-───────────────────────────────────────────────────────────────────────────────────────
+─────────────────────────────────────────────────────────────────────────────────────────
 ## 🗃️ Project Breakdown
 
 ### 1️⃣ Data Ingestion (Bronze Layer)
@@ -88,8 +85,7 @@ Power BI Dashboard (Simple reporting layer) </pre>
 
 - Top Performing Products (Horizontal Bar Chart)
 
-───────────────────────────────────────────────────────────────────────────────────────
-
+─────────────────────────────────────────────────────────────────────────────────────────
 ## 🎓 Key Takeaways
 
 - Implemented Medallion Architecture in a real-world Azure data pipeline
@@ -102,9 +98,33 @@ Power BI Dashboard (Simple reporting layer) </pre>
 
 - Integrated Synapse with Power BI for business-ready reporting.
 
-───────────────────────────────────────────────────────────────────────────────────────
-
+─────────────────────────────────────────────────────────────────────────────────────────
 ## 📷 Project Visual Demo
+
+![Azure project diagram](https://github.com/user-attachments/assets/37da773f-dd6e-4d99-b640-99f04e29b78e)
+
+─────────────────────────────────────────────────────────────────────────────────────────
+## 🌟 Reflection
+
+- This project reflects the complete journey of an Azure Data Engineer - from ingesting structured data to delivering a clean, queryable layer for reporting.
+
+- It highlights the practical application of the Medallion Architecture using Azure services and demonstrates the ability to design, orchestrate, and document a real-world ETL pipeline.
+
+- The implementation remains simple and beginner-friendly, making it ideal for showcasing hands-on experience with Azure’s core data tools.
+
+─────────────────────────────────────────────────────────────────────────────────────────
+## 🤝 Acknowledgements
+
+Special thanks to the data engineering community for sharing valuable insights, which encouraged me to explore and apply real-world concepts hands-on.
+Also, sincere appreciation to [Ansh Lamba](https://www.youtube.com/@AnshLambaJSR) for the clear and insightful tutorial that guided me through the end-to-end implementation.
+─────────────────────────────────────────────────────────────────────────────────────────
+## 🧑‍💻 Reach Out
+
+**Author:** Hemambika Suresh  
+**LinkedIn:** [linkedin.com/in/Hemambika](https://www.linkedin.com/in/hemambika-ilangovan-74863428b/)]  
+
+
+
 
 
   
