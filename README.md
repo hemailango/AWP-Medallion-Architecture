@@ -4,7 +4,7 @@ This project demonstrates a complete ETL pipeline using Microsoft Azure services
 ───────────────────────────────────────────────────────────────────────────────────────
 
 
-# 📌 Project Objective
+## 🎯 Project Objective
 
 To implement a scalable Azure-based data pipeline that:
 
@@ -15,7 +15,7 @@ To implement a scalable Azure-based data pipeline that:
 
 ───────────────────────────────────────────────────────────────────────────────────────
 
-# 🧬 Architecture Overview
+## 🧬 Architecture Overview
 
 <pre> [GitHub CSV Files]
       |
@@ -36,32 +36,75 @@ Power BI Dashboard (Simple reporting layer) </pre>
 
 ───────────────────────────────────────────────────────────────────────────────────────
 
-# 🔧 Tools & Technologies
+## 🛠️ Tools & Technologies
 
-Tool/Service                                                        Role
+| 🧰 Tool/Service              | 🔍 Purpose                                                  |
+|-----------------------------|-------------------------------------------------------------|
+| Azure Data Factory          | Data ingestion from GitHub to DataLake (CSV to ADLS Gen2 - Bronze)     |
+| Azure Data Lake Gen2        | Structured storage for Bronze, Silver, and Gold layers      |
+| Azure Databricks            | Data cleaning and transformation using PySpark              |
+| PySpark                     | Distributed data processing in Databricks                   |
+| Azure Synapse Serverless SQL| Expose external tables and views for querying               |
+| Power BI                    | Data visualization and reporting from Synapse               |
 
-Azure Data Factory
+───────────────────────────────────────────────────────────────────────────────────────
+## 🗃️ Project Breakdown
 
-Move data from GitHub to Data Lake
+### 1️⃣ Data Ingestion (Bronze Layer)
 
-Azure Data Lake Gen2
+- Used Azure Data Factory to copy CSVs from GitHub into a raw container in ADLS
 
-Store files across Bronze/Silver/Gold layers
+- Stored each file in its original format in a structured folder without modification.
 
-Azure Databricks
+### 2️⃣ Data Transformation (Silver Layer)
 
-Transform and join data using PySpark
+- Established secure connection between Azure Data Lake and Databricks
 
-PySpark
+- Loaded multiple CSVs (Product, Customer, Sales, Returns) into Databricks
 
-Perform distributed data processing
+- Used PySpark to clean, filter, and transform the raw data
 
-Azure Synapse Serverless SQL
+- Performed table joins to generate enriched datasets for analysis
 
-Expose cleaned data for reporting
+- Stored the output data into a Silver container in cleaned format
 
-Power BI
+### 3️⃣ Data Serving (Gold Layer)
 
-Create simple visualizations to complete pipeline
+- Created external tables in Synapse Serverless SQL using OPENROWSET
+
+- Loaded transformed data into these external tables for optimized querying and reporting access
+
+### 4️⃣ Reporting (Power BI)
+
+- Connected Power BI to Synapse Serverless SQL using DirectQuery
+
+- Developed an interactive dashboard that includes:
+
+- Total Customers (Card visualization)
+
+- Order Quantity Trend (Line Chart)
+
+- Revenue by Product Category (Bar and Pie Chart using calculated measure)
+
+- Top Performing Products (Horizontal Bar Chart)
+
+───────────────────────────────────────────────────────────────────────────────────────
+
+## 🎓 Key Takeaways
+
+- Implemented Medallion Architecture in a real-world Azure data pipeline
+
+- Established secure Azure service connections (Data Lake ↔ Databricks ↔ Synapse)
+
+- Applied PySpark for real-time data cleaning and transformation
+
+- Queried transformed data through Synapse external tables
+
+- Integrated Synapse with Power BI for business-ready reporting.
+
+───────────────────────────────────────────────────────────────────────────────────────
+
+## 📷 Project Visual Demo
+
 
   
